@@ -1,39 +1,6 @@
-const fs = require("fs")
-// const path = require("path");
+const fs = require("fs");
 
-// const {
-//     SubscriptionManager,
-//     simulateScript,
-//     ResponseListener,
-//     ReturnType,
-//     decodeResult,
-//     FulfillmentCode,
-//   } = require("@chainlink/functions-toolkit");
-
-// const { Location, ReturnType, CodeLanguage } = require("@chainlink/functions-toolkit")
-
-// Loads environment variables from .env.enc file (if it exists)
-// const ethers = require("ethers");
-require("@chainlink/env-enc").config()
-
-const Location = {
-    Inline: 0,
-    Remote: 1,
-}
-
-const CodeLanguage = {
-    JavaScript: 0,
-}
-
-const ReturnType = {
-    uint: "uint256",
-    uint256: "uint256",
-    int: "int256",
-    int256: "int256",
-    string: "string",
-    bytes: "Buffer",
-    Buffer: "Buffer",
-}
+const { Location, ReturnType, CodeLanguage } = require("@chainlink/functions-toolkit");
 
 // Configure the request by setting the fields below
 const requestConfig = {
@@ -57,4 +24,4 @@ const requestConfig = {
     secretsURLs: [],
 }
 
-module.exports = requestConfig
+module.exports = requestConfig;
